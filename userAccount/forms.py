@@ -16,4 +16,7 @@ class CustomUserCreationForm(UserCreationForm):
                   'genPres':'Présentation générale',
                   'threeGoodPoints':'Trois qualités qui vous définissent',
                   'threeExperiences':'Maximum trois expériences professionelles'}
-        required = {'cv': False if ('genPres' and 'threeGoodPoints' and 'threeExperiences') == None else True}
+        required = {'cv': False if ('genPres' and 'threeGoodPoints' and 'threeExperiences') == None else True,
+                    'genPres': False if 'cv' == None else True,
+                    'threeGoodPoints': False if 'cv' == None else True,
+                    'threeExperiences': False if 'cv' == None else True}
