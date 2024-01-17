@@ -2,13 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import CustomUser
 from .managers import CustomUserManager
-from django import forms
-
-
-class CustomUserCreationForm(forms.ModelForm):
-    class Meta:
-        model = CustomUser
-        fields = ('email','first_name', 'last_name', 'profile_picture', 'actualActivity', 'date_of_birth', 'adress', 'cv', 'genPres', 'threeGoodPoints', 'threeExperiences', 'phone_number', 'is_staff', 'is_superuser')
+from .forms import CustomUserCreationForm
 
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
@@ -30,7 +24,7 @@ class CustomUserAdmin(UserAdmin):
 
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal info', {'fields': ('first_name', 'last_name', 'profile_picture', 'actualActivity', 'date_of_birth', 'adress', 'cv', 'genPres', 'threeGoodPoints', 'threeExperiences', 'phone_number')}),
+        ('Personal info', {'fields': ('first_name', 'last_name', 'profile_picture', 'actual_activity', 'date_of_birth', 'adress', 'cv', 'general_presentation', 'three_good_points', 'three_experiences', 'phone_number')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )
