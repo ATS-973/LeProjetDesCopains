@@ -13,3 +13,6 @@ class CustomEmployerUser(AbstractBaseUser, PermissionsMixin):
     objects = CustomEmployerManager()
     
     USERNAME_FIELD = 'nb_siret'
+
+    ### Algorithm de Luhn pour vérifier le siret
+    ### Plus surcherger save (voir chatGPT)
