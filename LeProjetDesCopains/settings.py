@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'userAccount.apps.UseraccountConfig',
     'employerAccount.apps.EmployeraccountConfig',
+    'jobAnnouncement.apps.JobannouncementConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
