@@ -21,6 +21,8 @@ class CustomEmployerAdmin(UserAdmin):
 
     fieldsets = (
         (None, {'fields': ('nb_siret', 'password')}),
+        ('Infos', {'fields': ('nom_enseigne',)}),
+        ('Adresse', {'fields': ('libelle_de_voie', 'code_postal', 'ville')}),
     )
 
 admin.site.register(CustomEmployerUser, CustomEmployerAdmin)

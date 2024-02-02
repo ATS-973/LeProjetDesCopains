@@ -2,8 +2,6 @@ from django.contrib.auth.models import BaseUserManager
 from api_insee import ApiInsee
 import requests
 
-data = {}
-
 api = ApiInsee(
     key = "F16E_kTAmtPLDt1p0bxKTE2UuZ4a",
     secret = "WjR5T2GyB4rojD0nyZxDE1ws65Ia"
