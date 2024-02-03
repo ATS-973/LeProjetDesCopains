@@ -23,6 +23,7 @@ class CustomEmployerAdmin(UserAdmin):
         (None, {'fields': ('nb_siret', 'password')}),
         ('Infos', {'fields': ('nom_enseigne',)}),
         ('Adresse', {'fields': ('libelle_de_voie', 'code_postal', 'ville')}),
+        ('Contact', {'fields': ('email', 'website', 'phone')})
     )
 
 admin.site.register(CustomEmployerUser, CustomEmployerAdmin)
