@@ -19,7 +19,7 @@ class CustomUserAdmin(UserAdmin):
     list_filter = ['is_staff', 'is_superuser']
 
     # Spécifiez les champs qui doivent être affichés dans l'interface d'administration
-    list_display = ['email', 'first_name', 'last_name', 'is_staff', 'is_superuser']
+    list_display = ['user_id', 'email', 'first_name', 'last_name', 'is_staff', 'is_superuser']
     search_fields = ['email', 'first_name', 'last_name']
 
     fieldsets = (
